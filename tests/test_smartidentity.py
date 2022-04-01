@@ -1,4 +1,4 @@
-from smartidentity import __version__
+from sso_server import __version__
 
 
 def test_version():

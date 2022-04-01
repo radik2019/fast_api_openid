@@ -5,12 +5,12 @@ from urllib import request
 from fastapi import APIRouter, HTTPException, Depends, Header,Request, Response
 from odmantic import ObjectId
 from pydantic import SecretStr, SecretBytes, ValidationError
-from smartidentity.database import engine
-from smartidentity.models.application import  Application, AppCredential
-from smartidentity.models.user import User, Cookie, Token
-from smartidentity.utils.debugging import dbg
-from smartidentity.auth import *
-from smartidentity.config import ENCRYPT_TOKEN, tok
+from sso_server.database import engine
+from sso_server.models.application import  Application, AppCredential
+from sso_server.models.user import User, Cookie, Token
+from sso_server.utils.debugging import dbg
+from sso_server.auth import *
+from sso_server.config import ENCRYPT_TOKEN, tok
 from fastapi.responses import JSONResponse
 from typing import Optional
 from fastapi.templating import Jinja2Templates
@@ -22,7 +22,7 @@ from starlette.requests import Request
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=ENCRYPT_TOKEN)
 auth_handler = AuthHandler()
 router = APIRouter(prefix="")
-templates = Jinja2Templates(directory="smartidentity/templates")
+templates = Jinja2Templates(directory="sso_server/templates")
 
 
 @router.get("/refresh", tags=["login"])

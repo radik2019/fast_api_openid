@@ -10,16 +10,16 @@ from odmantic import ObjectId
 from jose import jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel, Field
-from smartidentity.config import (
+from sso_server.config import (
     SESSION_EXP_MIN, SESSION_EXP_SEC, SESSION_EXP_DAYS, 
     REFRESHED_EXP_MIN, REFRESHED_EXP_SEC, REFRESHED_EXP_DAYS,
     ALGORITHMS
 )
 
-from smartidentity.utils.debugging import dbg
-from smartidentity.database import engine
-from smartidentity.models.user import User
-from smartidentity.models.application import Application, AppCredential
+from sso_server.utils.debugging import dbg
+from sso_server.database import engine
+from sso_server.models.user import User
+from sso_server.models.application import Application, AppCredential
 import binascii
 from base64 import b64decode
 from typing import Optional

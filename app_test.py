@@ -3,10 +3,10 @@ from pydantic import BaseModel
 
 from fastapi import Body, FastAPI, status, Depends
 from fastapi.responses import JSONResponse
-from smartidentity.auth import *
+from sso_server.auth import *
 from fastapi.responses import HTMLResponse, RedirectResponse
-from smartidentity.utils.debugging import *
-from smartidentity.config import tok
+from sso_server.utils.debugging import *
+from sso_server.config import tok
 
 
 app = FastAPI()

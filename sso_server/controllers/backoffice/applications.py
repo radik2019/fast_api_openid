@@ -1,11 +1,11 @@
 import datetime
 from fastapi import APIRouter, HTTPException, Depends
 from odmantic import ObjectId
-from smartidentity.database import engine
-from smartidentity.models import Application
+from sso_server.database import engine
+from sso_server.models import Application
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm, HTTPBearer
-from smartidentity.config import ENCRYPT_TOKEN, tok
-from smartidentity.auth import AuthHandler
+from sso_server.config import ENCRYPT_TOKEN, tok
+from sso_server.auth import AuthHandler
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=ENCRYPT_TOKEN)
 auth_handler = AuthHandler()

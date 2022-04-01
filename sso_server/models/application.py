@@ -2,7 +2,7 @@ import datetime
 from typing import List, Optional
 from slugify import slugify
 from odmantic import EmbeddedModel, Model, Field
-from smartidentity.database import engine
+from sso_server.database import engine
 
 
 class AppCredential(EmbeddedModel):
