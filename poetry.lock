@@ -326,6 +326,14 @@ python-versions = ">=3.5.2"
 pymongo = ">=3.11,<4"
 
 [[package]]
+name = "mslib"
+version = "0.1.2"
+description = "mslib"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "odmantic"
 version = "0.3.5"
 description = "ODMantic, an AsyncIO MongoDB Object Document Mapper for Python using type hints "
@@ -653,7 +661,7 @@ dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d3aeb9f40841242c686fc4fde8ae6a6c494101f1b8d3ebb818c6a666aa549706"
+content-hash = "3aa97c605f2189783e2b9410edf6bd14ebf4e443a6bf59be4f699c6ad409e925"
 
 [metadata.files]
 anyio = [
@@ -946,6 +954,9 @@ markupsafe = [
 motor = [
     {file = "motor-2.3.1-py3-none-any.whl", hash = "sha256:ea5a8f5c7cbb08b7c301d7c66746fc96333d634182df236dff0f814f802fe232"},
     {file = "motor-2.3.1.tar.gz", hash = "sha256:319df35ef9d4099dc125b7d46b552fa88578675e0b06cab94624c666bb0a8a90"},
+]
+mslib = [
+    {file = "mslib-0.1.2.tar.gz", hash = "sha256:d5498fed37b38a55994d4d0698c69b2e5b44cb314751f14b74e1ae7645b89d3c"},
 ]
 odmantic = [
     {file = "ODMantic-0.3.5-py3-none-any.whl", hash = "sha256:ba62c0c51c224d0d2cfe3684cc7ace4c1fde55bf7631630e1dbe2bd08c6e0b6c"},

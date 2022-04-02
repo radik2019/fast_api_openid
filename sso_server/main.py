@@ -7,7 +7,7 @@ from .routes import api_v1_router, api_v2_router
 from sso_server.config import *
 from sso_server.utils.debugging import dbg
 from sso_server.config import setting
-
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
     title=setting.TITLE,
@@ -16,6 +16,9 @@ app = FastAPI(
     redoc_url=setting.REDOC_URL,
     version=setting.VERSION
 )
+
+# app.mount("sso_server/templates/images")
+app.mount("/sso_server/static", StaticFiles(directory="sso_server/static"), name="static")
 
 
 # @app.middleware("http")

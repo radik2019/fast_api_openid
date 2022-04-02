@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <header>
-
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <meta http-equiv="refresh" charset="utf-8" >
+<!--  -->
 </header>
 <html>
-<body bgcolor="grey">
-  <center>
-    <font color="white">
-    <h2>Login</h2>
+<body>
+    <div id="cntr">
+    <div id="login_name">Login</div>
+    <hr class="rounded">
+
     <form method="POST" action="http://0.0.0.0:9000/login_form" >
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username"><br><br>
-      <label for="password">Password:</label>
-      <input type="text" id="password" name="password"><br><br>
-      <input type="submit" value="Submit">
-    </form></font>
-    <h2>{{ message }} </h2>
-  </center>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      
+      <label for="password">Password:</label><br>
+      <input type="text" id="password" name="password"><br>
+      <input type="submit" value="Submit" >
+    </form>
+    <!-- <h2>{{ message }} </h2> -->
+</div>
 
 </body>
 </html>
